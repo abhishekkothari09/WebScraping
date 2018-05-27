@@ -17,22 +17,8 @@ def html_parsing(my_url):
 
 def remove_links(page_soup):
 
-    #ptags = page_soup.findAll("div", {"class": "mw-parser-output"})
-    #container = page_soup.findAll("div", {"class": "mw-body"})
-
-    #for div in divs:
-    #    h1 = div.find("h1")
-    #    h2 = div.find("h2")
-    #    h3 = div.find("h3")
-    #    print(h1.text)
-    #    print(h2.text)
-    #    print(h3.text)
-
-
-
-
+    # Get the <p> tags and remove the hyperlinks and images
     ptags = page_soup.findAll("p")
-    #print(ptags)
     for ptag in ptags:
         print(ptag.text)
         document.add_paragraph(ptag.text)
@@ -42,7 +28,4 @@ my_url = 'https://en.wikipedia.org/wiki/Film'
 page_soup = html_parsing(my_url)
 document = Document()
 cleaned = remove_links(page_soup)
-#document.add_paragraph(page_soup.text)
-#print(page_soup)
-
 document.save('demo.docx')
