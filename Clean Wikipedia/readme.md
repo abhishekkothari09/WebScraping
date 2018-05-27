@@ -17,8 +17,8 @@ These instructions will get you a copy of the project up and running on your loc
 * Install Python docx package
     * Open the cmd prompt
     * Type `pip install python-docx`
-* Open the program in any IDE, change the link for 'my_url' variable
-* Hit run in any python IDE
+* Run the Clean_wiki.py file. 
+* Paste the link from wikipedia and hit enter.
 
 ## Output
 * "demo.docx" file is created with the wikipedia page consisting only of text data without the hyperlinks and images.
