@@ -24,7 +24,8 @@ def remove_links(page_soup):
         document.add_paragraph(ptag.text)
 
 # First page
-my_url = 'https://en.wikipedia.org/wiki/Film'
+#my_url = 'https://en.wikipedia.org/wiki/Film'
+my_url = input("Please enter the URL from wikipedia :  ")
 page_soup = html_parsing(my_url)
 document = Document()
 cleaned = remove_links(page_soup)
